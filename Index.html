@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finse - Toma el control de tus finanzas sin esfuerzo</title>
+    <style>
+        :root {
+            --primary: #4F46E5;
+            --secondary: #10B981;
+            --dark: #1F2937;
+            --light: #F9FAFB;
+            --gray: #6B7280;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), #7C3AED);
+            color: white;
+            padding: 80px 0 120px;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 60px;
+        }
+        
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .subtitle {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            background-color: #059669;
+        }
+        
+        .benefits {
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        h2 {
+            font-size: 36px;
+            margin-bottom: 60px;
+            color: var(--primary);
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .benefit-card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .benefit-icon {
+            font-size: 48px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        
+        .how-it-works {
+            background-color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 60px;
+        }
+        
+        .step {
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            position: relative;
+            padding-top: 60px;
+        }
+        
+        .step-number {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+            
+            .subtitle {
+                font-size: 18px;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Finse</div>
+            <h1>Toma el control de tus finanzas sin esfuerzo</h1>
+            <p class="subtitle">¿Cansado de perder horas organizando tus gastos en Excel? Finse conecta tus cuentas en segundos y te muestra exactamente en qué gastas, para que tomes el control sin esfuerzo. ¡Como Carmen, que ahorró $300 en suscripciones olvidadas en el primer mes!</p>
+            <a href="#waitlist" class="cta-button">Únete a la lista de espera</a>
+        </div>
+    </header>
+    
+    <section class="benefits">
+        <div class="container">
+            <h2>Beneficios de Finse</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">📊</div>
+                    <h3>Automatización total</h3>
+                    <p>Olvídate de ingresar gastos manualmente. Finse sincroniza automáticamente con tus cuentas bancarias y categoriza tus movimientos.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔔</div>
+                    <h3>Alertas inteligentes</h3>
+                    <p>Recibe notificaciones cuando tus patrones de gasto cambian o cuando estás por exceder tu presupuesto en alguna categoría.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Enfoque en tus metas</h3>
+                    <p>Define objetivos financieros claros y Finse te mostrará el camino más eficiente para alcanzarlos, ajustando tu presupuesto automáticamente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="how-it-works">
+        <div class="container">
+            <h2>Así funciona Finse</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Conecta tus cuentas</h3>
+                    <p>Vincula tus cuentas bancarias de forma segura en solo minutos. Usamos tecnología encriptada y solo lectura.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Descubre tus patrones</h3>
+                    <p>Finse analiza automáticamente tus gastos e ingresos, mostrándote visualmente dónde puedes optimizar.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Toma el control</h3>
+                    <p>Configura presupuestos personalizados y recibe recomendaciones inteligentes para mejorar tu salud financiera.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="waitlist" class="benefits" style="background-color: #F0FDF4; padding: 80px 0;">
+        <div class="container" style="text-align: center;">
+            <h2 style="margin-bottom: 30px;">Únete a nuestra lista de espera</h2>
+            <p style="max-width: 600px; margin: 0 auto 30px;">Sé de los primeros en probar Finse y obtén 3 meses gratis al lanzamiento.</p>
+            <form style="max-width: 400px; margin: 0 auto;">
+                <input type="email" placeholder="Tu mejor correo electrónico" style="width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 50px; margin-bottom: 15px; font-size: 16px;">
+                <button type="submit" class="cta-button" style="border: none; cursor: pointer; width: 100%;">Reservar mi acceso</button>
+            </form>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>© 2023 Finse. Todos los derechos reservados.</p>
+            <p style="margin-top: 10px; font-size: 14px; opacity: 0.8;">Tu privacidad es importante para nosotros. Nunca compartiremos tus datos sin tu consentimiento.</p>
+        </div>
+    </footer>
+</body>
+</html>
